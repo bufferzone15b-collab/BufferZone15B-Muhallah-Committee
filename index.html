@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
@@ -150,6 +149,18 @@ footer{
     color:#aeefff;
 }
 
+.file-name{
+    margin-top:12px;
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+    background:rgba(255,255,255,.08);
+    color:#dffcff;
+    font-size:15px;
+    border:1px solid rgba(255,255,255,.15);
+    word-break:break-word;
+}
+
 @media(max-width:600px){
     .container{
         margin:15px;
@@ -235,22 +246,24 @@ footer{
             (بجلی، گیس یا پانی) کے اس حصے کی تصویر اپلوڈ کریں جس میں پتہ واضح طور پر درج ہو۔
         </div>
 
-        <label>یوٹیلیٹی بل کی تصویر</label>
+       <label>یوٹیلیٹی بل کی تصویر</label>
 
-        <div class="upload-btn-wrapper">
-            <label for="attachedImage" class="upload-label">
-                📸 تصویر منتخب کریں یا کیمرہ استعمال کریں
-            </label>
+<div class="upload-btn-wrapper">
+    <label for="attachedImage" class="upload-label">
+        📸 تصویر اپلوڈ کریں (کیمرہ یا گیلری)
+    </label>
 
-            <input
-                type="file"
-                id="attachedImage"
-                name="Attached Image"
-                accept="image/*"
-                capture="environment"
-                required>
-        </div>
+    <input
+        type="file"
+        id="attachedImage"
+        name="Attached Image"
+        accept="image/*"
+        required>
+</div>
 
+<div id="fileName" class="file-name">
+    کوئی تصویر منتخب نہیں کی گئی
+</div>
         <button type="submit">فارم جمع کریں</button>
 
     </form>
@@ -294,6 +307,22 @@ document.getElementById("committeeForm").addEventListener("submit", function(e){
             return false;
         }
     }
+});
+
+document.getElementById('attachedImage').addEventListener('change', function(){
+
+    const fileName = document.getElementById('fileName');
+
+    if(this.files.length > 0){
+        fileName.innerHTML =
+            '✅ منتخب شدہ تصویر:<br><strong>' +
+            this.files[0].name +
+            '</strong>';
+    } else {
+        fileName.innerHTML =
+            'کوئی تصویر منتخب نہیں کی گئی';
+    }
+
 });
 </script>
 
