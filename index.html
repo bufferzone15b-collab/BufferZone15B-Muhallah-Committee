@@ -1,262 +1,301 @@
+```html
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>اہم اطلاع برائے رہائشیان بفرزون ۱۵- بی</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Noto Naskh Arabic', serif;
-      margin: 0;
-      padding: 0;
-      background: radial-gradient(circle at top right, #0078ff 0%, #003b82 40%, #001f3f 100%);
-      color: #fff;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بفرزون 15-B محلہ کمیٹی</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Noto Naskh Arabic',serif;
+    margin:0;
+    padding:0;
+    background:radial-gradient(circle at top right,#0078ff 0%,#003b82 40%,#001f3f 100%);
+    color:#fff;
+}
+
+.container{
+    max-width:800px;
+    margin:30px auto;
+    background:rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.logo{
+    width:200px;
+    height:auto;
+    display:block;
+    margin:0 auto 20px auto;
+    border-radius:12px;
+    border:2px solid rgba(255,255,255,.7);
+    box-shadow:0 0 15px rgba(0,255,255,.4);
+}
+
+h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:25px;
+    background:linear-gradient(to right,#00eaff,#00ffb3);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.notice-box{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(0,255,255,.3);
+    border-radius:14px;
+    padding:22px;
+    line-height:2;
+    color:#e9faff;
+    margin-bottom:35px;
+    white-space:pre-wrap;
+}
+
+label{
+    font-weight:bold;
+    margin-top:15px;
+    display:block;
+    font-size:17px;
+    color:#aef9ff;
+}
+
+input,textarea,select{
+    width:100%;
+    padding:12px;
+    margin-top:7px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.4);
+    font-size:16px;
+    background:rgba(255,255,255,.1);
+    color:#fff;
+    box-sizing:border-box;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#d7faff;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline:none;
+    border-color:#00eaff;
+    box-shadow:0 0 10px #00eaff99;
+}
+
+button{
+    background:linear-gradient(90deg,#00eaff,#0078ff);
+    color:#fff;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:19px;
+    cursor:pointer;
+    width:100%;
+    margin-top:25px;
+    font-weight:700;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+.note{
+    background:rgba(255,255,255,.08);
+    border:1px dashed #00ffff;
+    border-radius:10px;
+    padding:18px;
+    margin-top:25px;
+    line-height:1.9;
+}
+
+.upload-btn-wrapper{
+    position:relative;
+    display:block;
+    width:100%;
+    margin-top:10px;
+}
+
+.upload-label{
+    display:block;
+    background:linear-gradient(90deg,#00c3ff,#0066ff);
+    color:#fff;
+    text-align:center;
+    padding:14px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.upload-btn-wrapper input[type=file]{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    font-size:15px;
+    color:#aeefff;
+}
+
+@media(max-width:600px){
+    .container{
+        margin:15px;
+        padding:20px;
     }
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.25);
-      animation: fadeIn 1.2s ease;
+
+    h2{
+        font-size:25px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .logo {
-        width: 200px;
-        height: auto;
-        display: block;
-        margin: 0 auto 20px auto;
-        border-radius: 12px;
-        border: 2px solid rgba(255,255,255,0.7);
-        box-shadow: 0 0 15px rgba(0,255,255,0.4);
-    }
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 25px;
-      background: linear-gradient(to right, #00eaff, #00ffb3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 12px rgba(0,255,255,0.4);
-    }
-    .notice-box {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(0,255,255,0.3);
-      border-radius: 14px;
-      padding: 22px;
-      line-height: 2;
-      color: #e9faff;
-      margin-bottom: 35px;
-      box-shadow: inset 0 0 20px rgba(0,255,255,0.08);
-      white-space: pre-wrap;
-    }
-    label {
-      font-weight: bold;
-      margin-top: 15px;
-      display: block;
-      font-size: 17px;
-      color: #aef9ff;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 7px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.4);
-      font-size: 16px;
-      background: rgba(255,255,255,0.1);
-      color: #fff;
-      transition: 0.3s;
-      box-sizing: border-box;
-    }
-    input:focus, textarea:focus, select:focus {
-      border-color: #00eaff;
-      box-shadow: 0 0 10px #00eaff99;
-      outline: none;
-    }
-    button {
-      background: linear-gradient(90deg, #00eaff, #0078ff);
-      color: #fff;
-      padding: 14px;
-      border: none;
-      border-radius: 12px;
-      font-size: 19px;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 25px;
-      font-weight: 700;
-      box-shadow: 0 0 25px rgba(0,255,255,0.4);
-      transition: all 0.3s ease;
-    }
-    button:hover {
-      background: linear-gradient(90deg, #00ffb3, #00c3ff);
-      transform: scale(1.03);
-      box-shadow: 0 0 35px rgba(0,255,255,0.6);
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 15px;
-      color: #aeefff;
-      opacity: 0.9;
-    }
-    .note {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px dashed #00ffff;
-      border-radius: 10px;
-      padding: 18px;
-      margin-top: 25px;
-      line-height: 1.9;
-      color: #eaffff;
-    }
-    .upload-btn-wrapper {
-      position: relative;
-      display: block;
-      width: 100%;
-      margin-top: 10px;
-    }
-    .upload-label {
-      display: block;
-      background: linear-gradient(90deg, #00c3ff, #0066ff);
-      color: #fff;
-      text-align: center;
-      padding: 14px;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 0 20px rgba(0,255,255,0.4);
-      transition: all 0.3s ease;
-    }
-    .upload-label:hover {
-      background: linear-gradient(90deg, #00ffb3, #00c3ff);
-      transform: scale(1.03);
-      box-shadow: 0 0 35px rgba(0,255,255,0.6);
-    }
-    .upload-btn-wrapper input[type=file] {
-      position: absolute;
-      top: 0; right: 0; left: 0; bottom: 0;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-    }
-    @media (max-width: 600px) {
-      .container { padding: 20px; margin: 20px; }
-      h2 { font-size: 26px; }
-      input, textarea, select, button { font-size: 16px; }
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <img src="logo.jpg" class="logo" alt="Muhalla Committee Logo">
-    <h2>اہم اطلاع برائے رہائشیان بفرزون ۱۵- بی</h2>
+
+<div class="container">
+
+    <img src="logo.jpg" class="logo" alt="Bufferzone 15-B Logo">
+
+    <h2>اہم اطلاع برائے رہائشیان بفرزون 15-B</h2>
 
     <div class="notice-box">
-محترم رہائشی حضراتء
-السلام علیکم ورحمة الله وبرکاتھ
+محترم رہائشی حضرات
+السلام علیکم ورحمۃ اللہ وبرکاتہ
 
-ہم نے بفرزون ۱۵ بی ریزیڈنٹس کمیٹی کے قیام کی بنیاد رکھ دی ہے جسے جلد حتمی شکل دی جائے گی۔
-یہ کمیٹی علاقے کے مخلص ذمہ دار اور دیرینہ رہائشیوں پر مشتمل ہوگی اور اس کا مقصد علاقے کی سیکیورٹی اور دیگر مسائل کے حل کی
-کوشش کے لیے اقدامات کرنا ہے۔
+ہم بفرزون 15-B ریزیڈنٹس کمیٹی کے قیام کی بنیاد رکھنے جا رہے ہیں، جسے جلد آپ کی مشاورت اور تعاون سے حتمی شکل دی جائے گی۔ یہ کمیٹی علاقے کے مخلص، ذمہ دار اور دیرینہ رہائشیوں پر مشتمل ہوگی۔
 
-بڑھتے ہوئے جرائم - فوری اقدامات
+اس کمیٹی کا بنیادی مقصد محلہ 15-B کے بنیادی مسائل کو اجاگر کرنا اور ان کے حل کے لیے متعلقہ اداروں اور ذمہ داران تک مؤثر انداز میں پہنچانا ہوگا۔
 
-گزشتہ کچھ عرصے میں علاقے میں اسٹریٹ کرائمء چھینا جھپٹیء چوری اور ڈکیتی میں خطرناک حد تک اضافہ ہوا ہے جس نے خواتینء بچوں
-اور بزرگوں کے لیے بھی علاقے کو غیر محفوظ بنا دیا ہے۔ ہمارے نوٹس میں آیا ہے اور شکایات بھی موصول ہوئی ہیں کہ علاقے میں موجود
-اسکول جانے والی بچیوں اور خواتین سے چھیڑ چھاڑ اور نازیبا حرکات کی کوششوں میں غیر رہائشی افراد ملوث ہیں جو کہ نہایت تشویشناک
-اور خطرناک صورتحال ہے۔ اس کے ساتھ ساتھ یہ بھی دیکھا گیا ہے کہ علاقے کے پارکس اور گراؤنڈز میں غیر رہائشی افراد کا اثرو رسوخ غیر
-معمولی حد تک بڑھ چکا ہے جس کے باعث ہمارے بچے اور خاندان کے افراد کھیلنے اور ایک محفوظ جگہ پر وقت گزارنے سے بھی محروم ہو
-چکے ہیں اور اس سب کی روک تھام انتہائی ضروری ہے۔
+حال ہی میں K-Electric کی جانب سے پیدا ہونے والے سنگین مسئلے نے یہ ثابت کیا کہ جب 15-B کے رہائشی متحد ہو کر اپنی آواز بلند کرتے ہیں تو مثبت نتائج حاصل کیے جا سکتے ہیں۔ اس مسئلے کے حل کے لیے اہلِ علاقہ کی اجتماعی کوششوں اور عوامی طاقت نے اہم کردار ادا کیا، اور یہ بات سب کے سامنے ہے کہ اتحاد اور مشترکہ جدوجہد ہی کامیابی کی بنیاد بنتی ہے۔
 
-کمیٹی اس اقدام کے ابتدائی مرحلے میں درج ذیل اقدامات کرے گی:
-داخلی اور خارجی راستوں پر سیکیورٹی بیریئرز لگائے جائیں گے اور چھوٹی گلیوں کو مستقل طور پر بند کیا جائے گا
-داخلی؛ خارجی راستوں اور علاقے کے دیگر اہم مقامات پر سیکیورٹی گارڈز تعینات کیے جائیں گے
-اس منصوبے کے پہلے مرحلے میں ہر گھرانے سے سیکیورٹی بیریئرزہ گارڈز کی تنخواہیں اور دیگر ضروری اخراجات میں تعاون کی
-درخواست ہے۔ رقم کا تعین کمیٹی تخمینہ مکمل کرنے کے بعد کرے گی اور ہر گھرانے کے اندازاً اخراجات جلد فراہم کنندگان (vendors) سے
-کوٹیشنز حاصل ہونے اور قانونی تقاضے مکمل ہونے کے بعد شیئر کیے جائیں گے۔
-اس مہم کے دوسرے حصے میں کمیٹی علاقے میں CCTV کیمرے نصب کرنے کا عزم رکھتی ہے تاکہ علاقے میں سیکیورٹی کا مستقل حل
-نکالا جا سکے اور علاقے میں ہونے والی سرگرمیوں کی مؤثر نگرانی ممکن ہو۔
+اسی تجربے کی روشنی میں یہ محسوس کیا گیا ہے کہ اگر 15-B کی ایک باقاعدہ محلہ کمیٹی قائم ہو جائے تو محلے کے مسائل کو منظم انداز میں متعلقہ اداروں تک پہنچانا زیادہ آسان ہو جائے گا۔ موجودہ سیاسی و سماجی ذمہ داران کی رہنمائی اور عوامی تعاون سے ان مسائل کے حل کے امکانات بھی مزید بہتر ہوں گے۔
 
-کیا آپ ان گزارشات سے متفق ہیں؟
+کمیٹی کے اہم مقاصد:
+
+• محلہ 15-B کے بنیادی مسائل کی نشاندہی اور ان کے حل کے لیے اجتماعی کوشش کرنا۔
+
+• بجلی، پانی، سیوریج، صفائی ستھرائی، سڑکوں اور دیگر شہری سہولیات سے متعلق مسائل کو متعلقہ اداروں تک پہنچانا۔
+
+• اہلِ محلہ کے درمیان باہمی رابطہ، اتحاد اور تعاون کو فروغ دینا۔
+
+• عوامی مفاد کے معاملات میں اجتماعی آواز بننا اور ذمہ دار اداروں سے رابطہ رکھنا۔
+
+• محلے کی فلاح و بہبود اور ترقی کے لیے تجاویز اور منصوبہ بندی کرنا۔
+
+اس مقصد کے تحت یہ فارم ترتیب دیا گیا ہے تاکہ آپ اپنی رائے، تجاویز اور مشاورت کے ذریعے اس کوشش کو کامیاب بنانے میں اپنا کردار ادا کریں اور بفرزون 15-B محلہ کمیٹی کے قیام کو یقینی بنانے میں ہمارا ساتھ دیں۔
+
+کیا آپ بفرزون 15-B محلہ کمیٹی کے قیام اور اس مقصد سے متفق ہیں؟
     </div>
 
-    <form id="committeeForm" action="https://formsubmit.co/bufferzone15b@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
-      <input type="hidden" name="_captcha" value="false">
+    <form id="committeeForm"
+          action="https://formsubmit.co/bufferzone15b@gmail.com"
+          method="POST"
+          enctype="multipart/form-data">
 
-      <label>کیا آپ اس مہم سے متفق ہیں؟</label>
-      <select name="Agreement" required>
-        <option value="">-- انتخاب کریں --</option>
-        <option value="Yes">ہاں</option>
-        <option value="No">نہیں</option>
-      </select>
+        <input type="hidden" name="_captcha" value="false">
 
-      <label>نام</label>
-      <input type="text" name="Name" required>
+        <label>کیا آپ محلہ کمیٹی کے قیام سے متفق ہیں؟</label>
+        <select name="Agreement" required>
+            <option value="">-- انتخاب کریں --</option>
+            <option value="ہاں">ہاں</option>
+            <option value="نہیں">نہیں</option>
+        </select>
 
-      <label>گھر نمبر</label>
-      <input type="text" name="House No" required>
+        <label>نام</label>
+        <input type="text" name="Name" required>
 
-      <label>موبائل نمبر</label>
-      <input type="text" name="Contact No" required>
+        <label>گھر نمبر</label>
+        <input type="text" name="House No" required>
 
-      <label>واٹس ایپ نمبر</label>
-      <input type="text" name="WhatsApp No" required>
+        <label>موبائل نمبر</label>
+        <input type="text" name="Contact No" required>
 
-      <label>(براہ کرم وجہ بیان کریں یا اپنی تجاویز پیش کریں):</label>
-      <textarea name="Remarks" rows="4"></textarea>
+        <label>واٹس ایپ نمبر</label>
+        <input type="text" name="WhatsApp No" required>
 
-      <div class="note">
-        <strong>نوٹ:</strong><br>
-        تصدیق کے لیے کہ یہ فارم واقعی گھر کے رہائشی نے ہی پُر کیا ہے، براہ کرم اپنے گھر کے کسی بھی یوٹیلیٹی بل (بجلی، گیس یا پانی) کے اُس حصے کی تصویر اپلوڈ کریں جہاں آپ کا پتہ واضح طور پر نظر آ رہا ہو۔
-      </div>
+        <label>اپنی تجاویز یا رائے تحریر کریں</label>
+        <textarea name="Remarks" rows="5"></textarea>
 
-      <label>📎 تصویر منسلک کریں (Attached Image)</label>
-      <div class="upload-btn-wrapper">
-        <label for="attachedImage" class="upload-label">📸 تصویر لیں یا اپلوڈ کریں</label>
-        <input type="file" id="attachedImage" name="Attached Image" accept="image/*" capture="environment" required>
-      </div>
+        <div class="note">
+            <strong>نوٹ:</strong><br>
+            رہائشی ہونے کی تصدیق کے لیے براہ کرم اپنے گھر کے کسی بھی یوٹیلیٹی بل
+            (بجلی، گیس یا پانی) کے اس حصے کی تصویر اپلوڈ کریں جس میں پتہ واضح طور پر درج ہو۔
+        </div>
 
-      <button type="submit">🚀 فارم جمع کریں</button>
+        <label>یوٹیلیٹی بل کی تصویر</label>
+
+        <div class="upload-btn-wrapper">
+            <label for="attachedImage" class="upload-label">
+                📸 تصویر منتخب کریں یا کیمرہ استعمال کریں
+            </label>
+
+            <input
+                type="file"
+                id="attachedImage"
+                name="Attached Image"
+                accept="image/*"
+                capture="environment"
+                required>
+        </div>
+
+        <button type="submit">فارم جمع کریں</button>
+
     </form>
 
-    <p>آئیںء مل کر بفرزون ۱۵- بی کو ایک محفوظ پرامن اور ریزیڈنٹس کے لیے سازگار علاقہ بنائیں --- ہمارے اور ہماری آنے والی نسلوں کے لیے۔</p>
-    <p>خیراندیش:<br>بفرزون ۱۵- بی ریزیڈنٹس کمیٹی</p>
-  </div>
+    <p>
+        آئیں، مل کر بفرزون 15-B کو ایک منظم، فعال اور مثالی رہائشی علاقہ بنائیں،
+        جہاں ہر مسئلے کے حل کے لیے اہلِ محلہ ایک آواز بن کر آگے بڑھیں۔
+    </p>
 
-  <footer>بفرزون ۱۵ بی - رہائشی کمیٹی © 2025</footer>
+    <p>
+        خیراندیش<br>
+        بفرزون 15-B ریزیڈنٹس کمیٹی (زیرِ تشکیل)
+    </p>
 
-  <script>
-    document.getElementById("committeeForm").addEventListener("submit", function(event) {
-      const form = event.target;
-      const fields = {
-        "Agreement": "براہ کرم اپنی رائے منتخب کریں (ہاں یا نہیں)",
-        "Name": "براہ کرم اپنا نام درج کریں",
-        "House No": "براہ کرم گھر نمبر درج کریں",
-        "Contact No": "براہ کرم موبائل نمبر درج کریں",
-        "WhatsApp No": "براہ کرم واٹس ایپ نمبر درج کریں",
-        "Attached Image": "براہ کرم یوٹیلیٹی بل کی تصویر اپلوڈ کریں"
-      };
+</div>
 
-      for (let fieldName in fields) {
-        const field = form.querySelector(`[name="${fieldName}"]`);
-        if (!field.value) {
-          alert(fields[fieldName]);
-          field.focus();
-          event.preventDefault();
-          return false;
+<footer>
+بفرزون 15-B ریزیڈنٹس کمیٹی © 2026
+</footer>
+
+<script>
+document.getElementById("committeeForm").addEventListener("submit", function(e){
+
+    const fields = {
+        "Agreement":"براہ کرم اپنی رائے منتخب کریں",
+        "Name":"براہ کرم اپنا نام درج کریں",
+        "House No":"براہ کرم گھر نمبر درج کریں",
+        "Contact No":"براہ کرم موبائل نمبر درج کریں",
+        "WhatsApp No":"براہ کرم واٹس ایپ نمبر درج کریں",
+        "Attached Image":"براہ کرم یوٹیلیٹی بل کی تصویر اپلوڈ کریں"
+    };
+
+    for(const fieldName in fields){
+
+        const field = document.querySelector(`[name="${fieldName}"]`);
+
+        if(!field.value){
+            alert(fields[fieldName]);
+            field.focus();
+            e.preventDefault();
+            return false;
         }
-      }
-    });
-  </script>
+    }
+});
+</script>
+
 </body>
 </html>
