@@ -211,10 +211,7 @@ footer{
 کیا آپ بفرزون 15-B محلہ کمیٹی کے قیام اور اس مقصد سے متفق ہیں؟
     </div>
 
-    <form id="committeeForm"
-          action="https://formsubmit.co/bufferzone15b@gmail.com"
-          method="POST"
-          enctype="multipart/form-data">
+    <form id="committeeForm">
 
         <input type="hidden" name="_captcha" value="false">
 
@@ -285,7 +282,14 @@ footer{
 </footer>
 
 <script>
-document.getElementById("committeeForm").addEventListener("submit", function(e){
+
+const CLOUD_NAME = "dxlzhqyfx";
+const UPLOAD_PRESET = "committee_upload";
+const ACCESS_KEY = "6c05e870-cfc6-44ae-b171-3cf7422d7b34";
+
+document.getElementById("committeeForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
 
     const fields = {
         "Agreement":"براہ کرم اپنی رائے منتخب کریں",
@@ -303,10 +307,98 @@ document.getElementById("committeeForm").addEventListener("submit", function(e){
         if(!field.value){
             alert(fields[fieldName]);
             field.focus();
-            e.preventDefault();
-            return false;
+            return;
         }
     }
+
+    const submitBtn = document.querySelector("button[type='submit']");
+    submitBtn.disabled = true;
+    submitBtn.innerText = "براہ کرم انتظار کریں...";
+
+    try {
+
+        const imageFile =
+            document.getElementById("attachedImage").files[0];
+
+        const imageData = new FormData();
+        imageData.append("file", imageFile);
+        imageData.append("upload_preset", UPLOAD_PRESET);
+
+        const uploadResponse = await fetch(
+            `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+            {
+                method: "POST",
+                body: imageData
+            }
+        );
+
+        const uploadResult = await uploadResponse.json();
+
+        if(!uploadResult.secure_url){
+            throw new Error("Image upload failed");
+        }
+
+        const formData = new FormData();
+
+        formData.append("access_key", ACCESS_KEY);
+
+        formData.append("Agreement",
+            document.querySelector('[name="Agreement"]').value);
+
+        formData.append("Name",
+            document.querySelector('[name="Name"]').value);
+
+        formData.append("House No",
+            document.querySelector('[name="House No"]').value);
+
+        formData.append("Contact No",
+            document.querySelector('[name="Contact No"]').value);
+
+        formData.append("WhatsApp No",
+            document.querySelector('[name="WhatsApp No"]').value);
+
+        formData.append("Remarks",
+            document.querySelector('[name="Remarks"]').value);
+
+        formData.append(
+            "Utility Bill Image",
+            uploadResult.secure_url
+        );
+
+        const response = await fetch(
+            "https://api.web3forms.com/submit",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
+
+        const result = await response.json();
+
+        if(result.success){
+
+            alert("آپ کا فارم کامیابی سے جمع ہو گیا ہے۔ شکریہ!");
+
+            document.getElementById("committeeForm").reset();
+
+            document.getElementById("fileName").innerHTML =
+                "کوئی تصویر منتخب نہیں کی گئی";
+
+        } else {
+
+            alert("فارم جمع نہیں ہو سکا۔ دوبارہ کوشش کریں۔");
+        }
+
+    } catch(error){
+
+        console.error(error);
+
+        alert("تصویر اپلوڈ یا فارم جمع کرنے میں مسئلہ پیش آیا۔");
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.innerText = "فارم جمع کریں";
+
 });
 
 document.getElementById('attachedImage').addEventListener('change', function(){
@@ -314,16 +406,20 @@ document.getElementById('attachedImage').addEventListener('change', function(){
     const fileName = document.getElementById('fileName');
 
     if(this.files.length > 0){
+
         fileName.innerHTML =
             '✅ منتخب شدہ تصویر:<br><strong>' +
             this.files[0].name +
             '</strong>';
+
     } else {
+
         fileName.innerHTML =
             'کوئی تصویر منتخب نہیں کی گئی';
     }
 
 });
+
 </script>
 
 </body>
